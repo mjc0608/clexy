@@ -64,6 +64,7 @@ $code-weight    = 300
 $white         = hsla(0, 0, 98%, 1)
 $gray          = hsla(0, 0, 45%, 1)
 $black         = hsla(0, 0, 8%, 1)
+$link-color    = rgb(0, 118, 168)
 
 $light-gray    = lighten($gray, 95%)
 $shade-gray    = lighten($gray, 35%)
@@ -82,7 +83,7 @@ $link-hover-header-color = $gray
 
 $body-color            = $black
 $post-meta-color       = $gray
-$body-link-color       = $black
+$body-link-color       = $link-color
 $body-link-hover-color = $gray
 
 $background-color   = $light-gray
@@ -99,6 +100,7 @@ html
   font-size 62.5%
 
 body
+  background-color $body-color
   color $body-color
   margin 0
   height 100vh
@@ -153,7 +155,6 @@ header
     font-size 4.5rem
     font-weight $title-weight
     letter-spacing -1px
-    text-shadow 0 1px 6px hsla(0, 0, 0, .5)
     a:hover
       text-decoration none
   // Blog description
@@ -164,7 +165,6 @@ header
     font-weight $body-weight
     letter-spacing 0
     margin 0
-    text-shadow 0 1px 3px hsla(0, 0, 0, .35)
   // Navigation list
   nav ul
     list-style none
@@ -192,16 +192,23 @@ header
     z-index 1
   //Logo
   .logo
-    height 100px
-    width 100px
-    border-radius 50%
     background-size contain;
-    background url(../images/logo.png) no-repeat $white
     background-color $white
     background-position center
     position relative
     z-index 2
     margin auto
+    width 150px
+    height 150px
+    border-radius 50%
+    background url("../images/avatar.jpg")
+    background-repeat no-repeat
+    background-size 100% 100%
+    margin-bottom 10px
+  .bigname
+    margin-bottom: -10px
+  .pagelabel
+    color $header-link-color
 
 // Header animation
 @keyframes slide
@@ -512,7 +519,7 @@ hr
       overflow hidden
       text-align right
       padding 40px
-      max-width 350px
+      max-width 275px
 
       .logo
         margin-right 0
@@ -537,3 +544,15 @@ hr
           input[type="email"]
             width 35%
             margin .5em .5em .5em 0
+
+
+.archivelink
+  color $shade-gray
+
+article
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin-top 25px

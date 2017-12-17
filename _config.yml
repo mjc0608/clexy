@@ -1,9 +1,10 @@
 # config
 logo: /images/logo.png
 menu:
-  home: ' '
-  articles: articles
-  author: author
+  home: ''
+  publication: publication
+  blog: blog
+  gpg: gpg
 
 # Content
 excerpt_link: Read more
