@@ -11,4 +11,4 @@ nav(itemscope, itemtype='https://schema.org/SiteNavigationElement')
         a(href= config.root + url, alt= label, title= label, itemprop='url')= label
         if label == 'gpg'
           span.pagelabel |
-          a(href="https://file.jachma.com/jiacheng_ma_cv.pdf", alt= 'cv', title= 'cv', itemprop='url')= 'cv'
+          a(href= config.root + "about/jiacheng_ma_cv.pdf", alt= 'cv', title= 'cv', itemprop='url')= 'cv'
