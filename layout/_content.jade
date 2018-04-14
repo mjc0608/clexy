@@ -95,7 +95,7 @@ else if is_page() && page.title.toLowerCase() == 'author'
           a(target="_blank",href=config.about.sourceforge)
             span(class="fa fa-noicon icons no-icons" aria-hidden="true") sf
 else if is_page()
-  if page.title.toLowerCase() == 'about' || page.title.toLowerCase() == 'gpg' || page.title.toLowerCase() == 'publication'
+  if page.title.toLowerCase() == 'about' || page.title.toLowerCase() == 'publication'
     article.full
       != page.content
     br

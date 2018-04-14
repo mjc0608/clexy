@@ -9,6 +9,7 @@ nav(itemscope, itemtype='https://schema.org/SiteNavigationElement')
     each url, label in theme.menu
       li(itemprop='name')
         a(href= config.root + url, alt= label, title= label, itemprop='url')= label
-        if label == 'gpg'
-          span.pagelabel |
-          a(href= config.root + "about/jiacheng_ma_cv.pdf", alt= 'cv', title= 'cv', itemprop='url')= 'cv'
+    li(itemprop='name')
+      a(href= "http://pgp.mit.edu/pks/lookup?search=0x7b969f3e&op=index", alt= 'gpg', title= 'gpg', itemprop='url')= 'gpg'
+      span.pagelabel |
+      a(href= config.root + "about/jiacheng_ma_cv.pdf", alt= 'cv', title= 'cv', itemprop='url')= 'cv'
